@@ -1,6 +1,9 @@
 {
   "name": "personal_todo_backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.19.2"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
