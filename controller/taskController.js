@@ -31,17 +31,6 @@ const task_post = async (req, res) => {
     }
 }
 
-const task_put = async (req, res) => {
-    try {
-        const taskData = await taskModel.findByIdAndUpdate(req.params.id,
-            { $set: req.body }, { new: true }
-        );
-        res.status(200).json(taskData);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-}
-
 const task_delete = async (req, res) => {
     try {
         const taskData = await taskModel.findByIdAndDelete(req.params.id);
@@ -55,6 +44,5 @@ module.exports = {
     task_get,
     task_get_complete,
     task_post,
-    task_put,
     task_delete
 }
